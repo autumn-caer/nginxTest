@@ -13,8 +13,8 @@ port        ENV.fetch("PORT") { 3000 }
 
 # Specifies the `environment` that Puma will run in.
 #
-# environment ENV.fetch("RAILS_ENV") { "development" }
-# bind "unix://#{Rails.root}/tmp/sockets/puma.sock"
+environment ENV.fetch("RAILS_ENV") { "development" }
+bind "unix://#{Rails.root}/tmp/sockets/puma.sock"
 # bind "unix:///home/vagrant/workspace/nginxTest/tmp/sockets/puma.sock"
 # bind "unix:///var/www/nginxTest/shared/tmp/sockets/puma.sock"
 
