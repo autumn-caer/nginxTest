@@ -15,7 +15,7 @@ port        ENV.fetch("PORT") { 3000 }
 #
 environment ENV.fetch("RAILS_ENV") { "development" }
 # bind "unix://#{Rails.root}/tmp/sockets/puma.sock"
-bind "unix:///var/www/my-app-name/shared/tmp/sockets/puma.sock"
+bind "unix:///var/www/nginxTest/shared/tmp/sockets/puma.sock"
 
 # Specifies the number of `workers` to boot in clustered mode.
 # Workers are forked webserver processes. If using threads and workers together
