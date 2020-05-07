@@ -26,6 +26,8 @@ set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} #{fetch(:rbenv_path)}/bin/r
 
 
 
+# シンボリックリンクをはるファイル。(※後述)
+set :linked_files, fetch(:linked_files, []).push('config/settings.yml')
 
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
 
