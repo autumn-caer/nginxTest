@@ -20,6 +20,13 @@ set :rbenv_ruby, '2.5.0'
 #出力するログのレベル。
 set :log_level, :debug
 
+set :rbenv_path, '~/.rbenv/' #指定するとこのパスは以下のbundleが、指定しないと$HOME配下のbundleが実行された
+set :bundle_path, './vendor/bundle'
+set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} #{fetch(:rbenv_path)}/bin/rbenv exec"
+
+
+
+
 append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
 
 namespace :deploy do
