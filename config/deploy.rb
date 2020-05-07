@@ -10,9 +10,9 @@ set :branch, 'master'
 # deploy先のディレクトリ。
 # set :deploy_to, '/var/www/mumu'
 # シンボリックリンクをはるファイル。(※後述)
-set :linked_files, fetch(:linked_files, []).push('config/settings.yml')
+# set :linked_files, fetch(:linked_files, []).push('config/settings.yml')
 # シンボリックリンクをはるフォルダ。(※後述)
-set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
+# set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system')
 # 保持するバージョンの個数(※後述)
 set :keep_releases, 5
 # rubyのバージョン
@@ -25,7 +25,7 @@ set :bundle_path, './vendor/bundle'
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 
 
-# append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
+append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
 
 namespace :deploy do
   desc "Make sure local git is in sync with remote."
