@@ -21,7 +21,7 @@ set :rbenv_ruby, '2.5.0'
 set :log_level, :debug
 
 set :rbenv_path, '~/.rbenv/' #指定するとこのパスは以下のbundleが、指定しないと$HOME配下のbundleが実行された
-set :bundle_path, '~/.rbenv/shims/bundle'
+set :bundle_path, 'shims/bundle'
 set :rbenv_prefix, "RBENV_ROOT=#{fetch(:rbenv_path)} #{fetch(:rbenv_path)}/bin/rbenv exec"
 
 
