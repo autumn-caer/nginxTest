@@ -49,13 +49,6 @@ namespace :deploy do
     end
   end
 
-  # desc "Restart Application"
-  # task :restart do
-  #   on roles(:app), in: :sequence, wait: 5 do
-  #     invoke 'puma:restart'
-  #   end
-  # end
-
   before :starting, :confirm
 end
 
